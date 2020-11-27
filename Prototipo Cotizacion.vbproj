@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85091468-60D2-48EE-8FAA-7290112B73A2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Prototipo_Cotizacion.My.MyApplication</StartupObject>
+    <RootNamespace>Prototipo_Cotizacion</RootNamespace>
+    <AssemblyName>Prototipo Cotizacion</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Prototipo Cotizacion.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Prototipo Cotizacion.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddArticulo.Designer.vb">
+      <DependentUpon>AddArticulo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddArticulo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCliente.Designer.vb">
+      <DependentUpon>AddCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="amlysoftware_tallerDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>amlysoftware_tallerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="amlysoftware_tallerDataSet.vb">
+      <DependentUpon>amlysoftware_tallerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Articulos.Designer.vb">
+      <DependentUpon>Articulos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Articulos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarArticulo.Designer.vb">
+      <DependentUpon>BuscarArticulo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarArticulo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarCliente.Designer.vb">
+      <DependentUpon>BuscarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiarImporte.Designer.vb">
+      <DependentUpon>CambiarImporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CambiarImporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CantidadArticulo.Designer.vb">
+      <DependentUpon>CantidadArticulo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CantidadArticulo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes.Designer.vb">
+      <DependentUpon>Clientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaCotizacion.Designer.vb">
+      <DependentUpon>ConsultaCotizacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaCotizacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaIndividualCotizacion.Designer.vb">
+      <DependentUpon>ConsultaIndividualCotizacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaIndividualCotizacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditArticulo.Designer.vb">
+      <DependentUpon>EditArticulo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditArticulo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCliente.Designer.vb">
+      <DependentUpon>EditCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCotizacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCotizacion.Designer.vb">
+      <DependentUpon>FormCotizacion.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReporteCotizacion.Designer.vb">
+      <DependentUpon>FormReporteCotizacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormReporteCotizacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDescuento.Designer.vb">
+      <DependentUpon>FrmDescuento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDescuento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenu.Designer.vb">
+      <DependentUpon>FrmMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddArticulo.resx">
+      <DependentUpon>AddArticulo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCliente.resx">
+      <DependentUpon>AddCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Articulos.resx">
+      <DependentUpon>Articulos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarArticulo.resx">
+      <DependentUpon>BuscarArticulo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarCliente.resx">
+      <DependentUpon>BuscarCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CambiarImporte.resx">
+      <DependentUpon>CambiarImporte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CantidadArticulo.resx">
+      <DependentUpon>CantidadArticulo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes.resx">
+      <DependentUpon>Clientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaCotizacion.resx">
+      <DependentUpon>ConsultaCotizacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaIndividualCotizacion.resx">
+      <DependentUpon>ConsultaIndividualCotizacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditArticulo.resx">
+      <DependentUpon>EditArticulo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCliente.resx">
+      <DependentUpon>EditCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCotizacion.resx">
+      <DependentUpon>FormCotizacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReporteCotizacion.resx">
+      <DependentUpon>FormReporteCotizacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDescuento.resx">
+      <DependentUpon>FrmDescuento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteCotizacion.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="amlysoftware_tallerDataSet.xsc">
+      <DependentUpon>amlysoftware_tallerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="amlysoftware_tallerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>amlysoftware_tallerDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="amlysoftware_tallerDataSet.xss">
+      <DependentUpon>amlysoftware_tallerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\065-delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\148705-essential-collection\png\110-zoom in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\148705-essential-collection\png\218-edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\148705-essential-collection\png\359-users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\148705-essential-collection\png\080-calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\148705-essential-collection\png\058-error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\148705-essential-collection\png\256-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\148705-essential-collection\png\248-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\148705-essential-collection\png\254-garbage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\148705-essential-collection\png\313-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\148705-essential-collection\png\276-trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\148705-essential-collection\png\279-edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\148705-essential-collection\png\004-picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\148705-essential-collection\png\022-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\148705-essential-collection\png\021-view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\148705-essential-collection\png\070-divide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\148705-essential-collection\png\079-calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\148705-essential-collection\png\143-windows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\148705-essential-collection\png\084-multiply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\148705-essential-collection\png\083-substract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\LOGO.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\660393-essentials\png\020-printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\660393-essentials\png\057-file-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\660393-essentials\png\068-zoom-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\660393-essentials\png\072-loupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\660393-essentials\png\079-eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\660393-essentials\png\082-vision-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\660393-essentials\png\105-trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\660393-essentials\png\124-calendar-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\660393-essentials\png\160-user-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\660393-essentials\png\188-photo-camera-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\660393-essentials\png\237-cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\660393-essentials\png\169-edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\071-loupe-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\258-calculator-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\259-calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\047-folder-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\056-file-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\079-eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\099-layers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\105-trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\160-user-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\188-photo-camera-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200-diskette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\237-cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\266-percentage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\121-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\169-edit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\169-edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\169-editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\124-calendar-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\660393-essentials\247-minus-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\660393-essentials\252-plus-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\660393-essentials\279-like.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\660393-essentials\020-printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
